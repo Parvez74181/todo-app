@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Varela Round", sans-serif;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 20px;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: #fff275;
+  .content {
+    width: 40rem;
+    height: 40rem;
+    overflow-y: scroll;
+    border-radius: 20px;
+    background: #fff275;
+    box-shadow: 20px 20px 59px #d9ce63, -20px -20px 59px #ffff87;
+    form {
+      width: 100%;
+      h1 {
+        width: 100%;
+        position: relative;
+        color: #ff3c38;
+        text-align: center;
+        font-size: 4rem;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -8px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 50%;
+          height: 5px;
+          border-radius: 10px;
+          background: #ff3c38;
+        }
+      }
+      #input,
+      button {
+        margin: 2rem auto;
+        outline: none;
+        border: 2px solid #ff3c38;
+        background: none;
+        padding: 0.5rem;
+        border-radius: 7px;
+        width: 70%;
+        font-size: 1.5rem;
+        color: #a23e48;
+        margin-left: 5%;
+      }
+      button {
+        width: 15%;
+        cursor: pointer;
+        transition: 0.2s;
+        &:hover {
+          color: #fff;
+          background: #ff3c38;
+          box-shadow: 0px 0px 15px #d93330;
+        }
+      }
+    }
+    .lists {
+      width: 100%;
+      padding: 1rem;
+      .list {
+        border-radius: 10px;
+        box-shadow: 0px 0px 3px #d93330;
+        padding: 1rem;
+        margin: 0.5rem;
+        justify-content: space-between;
+        .fa-trash {
+          color: #d93330;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.text-shadow-drop-bottom {
+  animation: text-shadow-drop-bottom 0.6s both;
+}
+@keyframes text-shadow-drop-bottom {
+  0% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    text-shadow: 0 6px 18px rgba(255, 60, 56, 0.3);
+  }
+}
